@@ -6,15 +6,31 @@
     <title>Pocket Bank- Best Budget Tracker</title>
     <!-- Link to favicon -->
     <link rel="icon" type="image/favicon" href="assets/images/favicon.png">
+    <!-- Link to font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Nav bar part -->
     <section class="navbar bg-white">
-        <div class="nav_item flex justify-between">
-            <div class="logo bg-red-500 w-[10%] h-20"></div>
-            <div class="menu bg-blue-500 w-[60%] h-20"></div>
-            <div class="user_profile bg-green-500 w-[30%] h-20"></div>
+        <div class="container-lg mx-auto">
+            <div class="nav_item flex justify-between p-2">
+                <div class="logo w-[10%]">
+                    <img class="w-[60px] h-[60px]" src="assets/images/logo.png" alt="logo">
+                </div>
+                <div class="menu w-[60%] flex items-center">
+                    <ul class="flex mb-4">
+                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Dashboard</a></li>
+                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Acounts</a></li>
+                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Records</a></li>
+                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Analytics</a></li>
+                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Imports</a></li>
+                    </ul>
+                </div>
+                <div class="user_profile bg-green-500 w-[30%] h-20"></div>
+            </div>
         </div>
     </section>
     
