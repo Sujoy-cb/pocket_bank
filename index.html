@@ -24,11 +24,11 @@
                 </div>
                 <div class="menu w-[60%] flex items-center">
                     <ul class="flex">
-                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Dashboard</a></li>
-                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Acounts</a></li>
-                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Records</a></li>
-                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Analytics</a></li>
-                        <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Imports</a></li>
+                        <li class="mr-10"><a class="nav-item font-roboto text-lg text-[#777] font-normal active:text-[#222]" href="#">Dashboard</a></li>
+                        <li class="mr-10"><a class="nav-item font-roboto text-lg text-[#777] font-normal active:text-[#222]" href="#">Acounts</a></li>
+                        <li class="mr-10"><a class="nav-item font-roboto text-lg text-[#777] font-normal active:text-[#222]" href="#">Records</a></li>
+                        <li class="mr-10"><a class="nav-item font-roboto text-lg text-[#777] font-normal active:text-[#222]" href="#">Analytics</a></li>
+                        <li class="mr-10"><a class="nav-item font-roboto text-lg text-[#777] font-normal active:text-[#222]" href="#">Imports</a></li>
                     </ul>
                 </div>
                 <div class="user_profile w-[30%] flex justify-between">
@@ -40,7 +40,7 @@
                             <img class="w-100 h-100" src="assets/images/profile.png" alt="profile">
                         </div>
                         <div class="user_name relative">
-                            <div class="name flex cursor-pointer" onclick="dropdown()"><h6 class="font-roboto text-medium text-[#444] font-medium mt-[5px] mr-[5px]">Sujoy Chakraborty</h6> <span class="mt-[4px] text-[#444]"><i class="fa-solid fa-caret-down"></i></span></div>
+                            <div class="name flex cursor-pointer"><h6 class="font-roboto text-medium text-[#444] font-medium mt-[5px] mr-[5px]">Sujoy Chakraborty</h6> <span class="mt-[4px] text-[#444]"><i class="fa-solid fa-caret-down"></i></span></div>
                             <!-- Dropdown -->
                             <div class="drop absolute top-[42px] right-[10px] bg-white border border-b-gray-200 hidden">
                                 <ul class="w-[150px]">
@@ -54,6 +54,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Add part -->
+    <section class="add bg-white px-2 py-4">
+        <div class="container-lg mx-auto">
+            <div class="add_item flex">
+                <div class="cash flex bg-[#6a1b9a] p-4 rounded cursor-pointer">
+                    <span class="text-white text-2xl mt-[12px]"><i class="fa-solid fa-coins"></i></span>
+                    <div class="amount ml-4">
+                        <h6 class="font-roboto text-lg text-[#d9d9d9] p-0">Cash</h6>
+                        <h4 class="font-roboto text-xl text-white font-medium p-0">BDT 1000000000</h4>
+                    </div>
+                </div>
+                <div class="add_input ml-[20px] border border-dashed rounded border-[#777] p-4 flex justify-center items-center cursor-pointer"> <p class="font-roboto text-sm text-[#777] font-sm">+ Add Account</p></div>
             </div>
         </div>
     </section>
