@@ -10,18 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Link to Css -->
+    <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
 
     <!-- Nav bar part -->
-    <section class="navbar bg-white">
+    <section class="navbar bg-white border-b border-b-gray-200">
         <div class="container-lg mx-auto">
             <div class="nav_item flex justify-between p-2">
                 <div class="logo w-[10%]">
                     <img class="w-[60px] h-[60px]" src="assets/images/logo.png" alt="logo">
                 </div>
                 <div class="menu w-[60%] flex items-center">
-                    <ul class="flex mb-4">
+                    <ul class="flex">
                         <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Dashboard</a></li>
                         <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Acounts</a></li>
                         <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Records</a></li>
@@ -29,7 +31,17 @@
                         <li class="mr-10"><a class="font-roboto text-lg text-[#777] font-normal" href="#">Imports</a></li>
                     </ul>
                 </div>
-                <div class="user_profile bg-green-500 w-[30%] h-20"></div>
+                <div class="user_profile w-[30%] flex justify-between">
+                    <div class="record_btn self-center">
+                        <button class="rounded-full bg-blue-500 px-2.5 py-[2px] font-roboto text-white text-sm">+ Record</button>
+                    </div>
+                    <div class="profile self-center flex justify-between">
+                        <div class="img w-[40px] h-[40px] rounded-full border-red-600 mr-[10px]">
+                            <img class="w-100 h-100" src="assets/images/profile.png" alt="profile">
+                        </div>
+                        <div class="name"><h6 class="font-roboto text-lg text-black font-medium mt-[5px]">Sujoy Chakraborty</h6> <span></span></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -40,6 +52,7 @@
 
     <!-- Link to JS -->
     <script src="js/code.jquery.com_jquery-1.12.4.min.js"></script>
+    <script src="js/all.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/tailwind.js"></script>
