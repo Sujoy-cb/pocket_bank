@@ -19,3 +19,21 @@ activeList.forEach((item)=>{
         item.classList.add('active')
     })
 })
+
+
+//Records//
+
+let record = document.querySelector('.record')
+
+let record_modal = document.querySelector('.record_modal')
+let cross = document.querySelector('.cross')
+
+record.addEventListener('click',()=>{
+    record_modal.classList.add('modalshow')
+    record_modal.classList.remove('hidden')
+})
+
+cross.addEventListener('click',()=>{
+    record_modal.classList.add('hidden')
+    record_modal.classList.remove('modalshow')
+})
