@@ -60,7 +60,7 @@
     </section>
 
     <!-- Record modal -->
-    <div class="record_modal w-full h-full bg-black bg-opacity-50 fixed top-0 left-0 flex justify-center items-center hidden">
+    <div class="record_modal w-full h-full bg-black bg-opacity-50 fixed top-0 left-0 flex justify-center items-center hidden z-10">
         <span class="cross absolute top-[50px] right-[50px] text-4xl text-white"><i class="fa-regular fa-circle-xmark"></i></span>
         <div class="record_item bg-white border border-[#777] rounded-lg w-[80%] absolute overflow-hidden">
             <div class="top_part p-4 border border-b-[#d9d9d9] rounded-t-lg">
@@ -167,14 +167,31 @@
             <!-- record part -->
             <div class="record_part flex justify-between mt-4">
                 <!-- side bar -->
-                <div class="record_seidebar bg-white w-2/12 h-[500px] p-4 rounded-lg">
-                    <h5 class="font-roboto text-3xl text-[#444] font-medium">Records</h5>
+                <div class="record_seidebar bg-white w-2/12 p-4 rounded-lg">
+                    <h5 class="font-roboto text-2xl text-[#444] font-medium">Records</h5>
                     <div class="add_btn mt-2">
-                        <button class="rounded-full bg-[#00915f] w-full p-2.5 font-roboto text-white text-sm">+ Add</button>
+                        <button class="add_record rounded-full bg-[#00915f] w-full p-2.5 font-roboto text-white text-sm">+ Add</button>
                     </div>
                     <div class="search mt-4 relative">
                         <span class="search_icon absolute top-2 left-[7px] text-[#777]"><i class="fa-solid fa-magnifying-glass"></i></span>
                         <input class="w-full border border-[#d9d9d9] outline-0 p-2 pl-[25px] rounded" type="text" placeholder="Search">
+                    </div>
+                    <div class="filter mt-4 relative">
+                        <h6 class="font-roboto text-[#444] text-lg font-medium uppercase">Filter</h6>
+                        <input class="w-full border border-[#d9d9d9] outline-0 p-2 mt-2 rounded" type="text" placeholder="Filter">
+                    </div>
+
+                    <!-- Sidebar nav options -->
+                    <div class="sidebarnav_options mt-4">
+                        <ul>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Accounts <span><i class="fa-solid fa-caret-right"></i></span></li>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Categories <span><i class="fa-solid fa-caret-right"></i></span></li>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Labels <span><i class="fa-solid fa-caret-right"></i></span></li>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Currencies <span><i class="fa-solid fa-caret-right"></i></span></li>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Record types <span><i class="fa-solid fa-caret-right"></i></span></li>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Payment types <span><i class="fa-solid fa-caret-right"></i></span></li>
+                            <li class="flex justify-between font-roboto text-[#444] text-medium font-semibold uppercase py-2">Record states <span><i class="fa-solid fa-caret-right"></i></span></li>
+                        </ul>
                     </div>
                 </div>
                 <!-- right bar -->
@@ -182,6 +199,104 @@
             </div>
         </div>
     </section>
+
+    <!-- Record modal -->
+    <div class="addrecord_modal w-full h-full bg-black bg-opacity-50 fixed top-0 left-0 flex justify-center items-center hidden">
+        <span class="hide_modal absolute top-[50px] right-[50px] text-4xl text-white"><i class="fa-regular fa-circle-xmark"></i></span>
+        <div class="record_item bg-white border border-[#777] rounded-lg w-[80%] absolute overflow-hidden">
+            <div class="top_part p-4 border border-b-[#d9d9d9] rounded-t-lg">
+                <h3 class="font-roboto text-2xl text-[#444] font-medium uppercase">Add Record</h3>
+            </div>
+            <div class="bottom_part flex">
+                <div class="left_part w-[60%]">
+                    <div class="inner_top bg-[#614BC3] text-center p-4 pb-6">
+                        <div class="buttons mt-2 border border-[#d9d9d9] rounded inline-block overflow-hidden">
+                            <button class="p-2 bg-white font-roboto text-medium text-[#FE0000]">Expense</button>
+                            <button class="p-2 bg-white font-roboto text-medium text-[#38E54D]">Income</button>
+                            <button class="p-2 bg-white font-roboto text-medium text-[#2192FF]">Transfer</button>
+                        </div>
+                        <div class="expense_item">
+                            <div class="account">
+                                <select class="w-[200px] h-[30px] outline-0 mt-4 font-roboto text-[#444] text-base font-medium">
+                                    <option>Cash</option>
+                                    <option>Cash</option>
+                                    <option>+Add Account</option>
+                                </select>
+                            </div>
+                            <div class="ex_amount w-[140px] inline-block m-auto mt-2">
+                                <input class="w-full p-2 outline-0" type="number" placeholder="Add Amount">
+                            </div>
+                            <div class="currency w-[60px] inline-block">
+                                <select class="w-full h-[40px] outline-0 mt-2 font-roboto text-[#444] text-base font-medium">
+                                    <option>BDT</option>
+                                    <option>USD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner_bottom bg-[#f5f5f5] p-4 pb-8">
+                        <div class="bottom_top flex">
+                            <div class="category w-6/12 ml-7">
+                                <h6 class="font-roboto text-[#444] text-lg font-medium">Category</h6>
+                                <select class="w-10/12 h-[38px] outline-0 mt-2 font-roboto text-[#444] text-lg font-medium">
+                                    <option>Category</option>
+                                    <option>Food & Drinks</option>
+                                    <option>Shopping</option>
+                                    <option>Housing</option>
+                                    <option>Vehicle</option>
+                                    <option>Life & Entertainment</option>
+                                </select>
+                            </div>
+                            <div class="label w-6/12 ml-7">
+                                <h6 class="font-roboto text-[#444] text-lg font-medium">Label</h6>
+                                <input class="w-10/12 outline-0 mt-2 p-2" type="text" placeholder="Add Label">
+                            </div>
+                        </div>
+
+                        <div class="bottom_bottom flex mt-4">
+                            <div class="date w-6/12 ml-7">
+                                <h6 class="font-roboto text-[#444] text-lg font-medium">Date</h6>
+                                <input class="w-10/12 outline-0 mt-2 p-2" type="date">
+                            </div>
+                            <div class="time w-6/12 ml-7">
+                                <h6 class="font-roboto text-[#444] text-lg font-medium">Time</h6>
+                                <input class="w-10/12 outline-0 mt-2 p-2" type="time">
+                            </div>
+                        </div>
+                        <div class="add_btn flex justify-center mt-7">
+                            <button class="w-[300px] bg-[#00DFA2] rounded-full p-2.5 font-roboto text-white text-lg font-medium">Add Record</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal right part -->
+                <div class="right_part w-[40%] bg-white p-4">
+                    <div class="note">
+                        <h6 class="font-roboto text-[#444] text-lg font-medium">Note</h6>
+                        <textarea class="border border-[#444] w-full h-[150px] outline-0 resize-none" ></textarea>
+                    </div>
+                    <div class="payment mt-2">
+                        <h6 class="font-roboto text-[#444] text-lg font-medium">Paymnet type</h6>
+                        <select class="w-full h-[40px] outline-0 mt-2 font-roboto text-[#444] text-base font-medium border border-[#777]">
+                            <option>Cash</option>
+                            <option>Debitcard</option>
+                            <option>Creditcard</option>
+                            <option>Transfer</option>
+                            <option>Voucher</option>
+                            <option>Mobile Payment</option>
+                        </select>
+                    </div>
+                    <div class="payment_status mt-2">
+                        <h6 class="font-roboto text-[#444] text-lg font-medium">Paymnet status</h6>
+                        <select class="w-full h-[40px] outline-0 mt-2 font-roboto text-[#444] text-base font-medium border border-[#777]">
+                            <option>Cleared</option>
+                            <option>Uncleared</option>
+                            <option>Cancelled</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
     

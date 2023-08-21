@@ -38,3 +38,21 @@ cross.addEventListener('click',()=>{
     record_modal.classList.add('hidden')
     record_modal.classList.remove('modalshow')
 })
+
+
+// Add button //
+
+let addRecord = document.querySelector('.add_record')
+
+let addrecordModal = document.querySelector('.addrecord_modal')
+let hideModal = document.querySelector('.hide_modal')
+
+addRecord.addEventListener('click',()=>{
+    addrecordModal.classList.add('modalshow')
+    addrecordModal.classList.remove('hidden')
+})
+
+hideModal.addEventListener('click',()=>{
+    addrecordModal.classList.add('hidden')
+    addrecordModal.classList.remove('modalshow')
+})
