@@ -11,6 +11,7 @@ dropbtn.addEventListener('click',()=>{
 
 let activeList = document.querySelectorAll('.nav-item')
 
+
 activeList.forEach((item)=>{
     item.addEventListener('click',()=>{
         activeList.forEach((item)=>{
