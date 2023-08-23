@@ -56,3 +56,13 @@ hideModal.addEventListener('click',()=>{
     addrecordModal.classList.add('hidden')
     addrecordModal.classList.remove('modalshow')
 })
+
+
+// Sidebar Menu //
+
+let outer_menu = document.querySelectorAll('.outer_menu')
+let inner_menu = document.querySelectorAll('.inner_menu')
+
+outer_menu.addEventListener('click',()=>{
+    inner_menu.classList.toggle('hidden')
+})
